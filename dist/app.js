@@ -40,9 +40,22 @@ class UI {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.pages}</td>
-        <td>${book.read}</td>`;
+        <td>${book.read}</td>
+        <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>`;
         list.appendChild(row);
     }
+
+    static clearFields() {
+        document.querySelector('#title').value = '';
+        document.querySelector('#author').value = '';
+        document.querySelector('#pages').value = '';
+    }
+
+    static deleteBook(el) {
+        if(el.classList.contains('delete')) {
+          el.parentElement.parentElement.remove();
+        }
+      }
 }
 
 
@@ -75,4 +88,11 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
     UI.addBookToList(book);
 
+    UI.clearFields();
+
+});
+
+// Remove a book 
+document.querySelector('#book-list').addEventListener('click', (e) => {
+    console.log(e.target);
 });
