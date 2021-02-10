@@ -1,19 +1,12 @@
-{ 
-  "name": "books-books",
-  "version": "1.0.0",
-  "description": "Responsive book library app",
-  "main": "app.js",
-  "homepage": "https://github.com/karmaester/Books-Books",
-  "scripts": {
-      "deploy": "gh-pages -d dist"
-    },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/karmaester/Books-Books.git"
-  },
-  "author": "karmaester",
-  "license": "MIT",
-  "dependencies": {
-    "gh-pages": "^3.1.0"
+{
+  "devDependencies": {
+    "babel-eslint": "10.1.x",
+    "eslint": "6.8.x",
+    "eslint-config-airbnb-base": "14.1.x",
+    "eslint-plugin-import": "2.20.x",
+    "stylelint": "13.3.x",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "3.17.x"
   }
 }
