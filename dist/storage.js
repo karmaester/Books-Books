@@ -28,4 +28,22 @@ export default class Store {
 
         localStorage.setItem('books', JSON.stringify(books))
     }
+
+    static readBook(title, pages) {
+        const books = Store.getBooks();
+
+        books.forEach((book) => {
+            if(book.pages === pages && book.title === title) {
+                if(book.read === 'Read') {
+                    book.read = 'Not Read';
+                } else {
+                    book.read = 'Read';
+            }
+            }
+            location.reload();
+        });
+
+        localStorage.setItem('books', JSON.stringify(books))
+
+    }
 }

@@ -10,6 +10,14 @@ export default class UI {
 
     static switcher() {
       let switchBtn = document.querySelectorAll('.status');
+
+      for (let i = 0; i < switchBtn.length; i++) {
+        switchBtn[i].addEventListener('click', (e) => {
+          const titlePar2 = e.target.parentElement.parentElement.parentElement.firstElementChild.textContent;
+          const pagPar = e.target.parentElement.parentElement.previousElementSibling.textContent;
+          Store.readBook(titlePar2, pagPar);
+        });
+      }
       console.log(switchBtn);
     }
 
@@ -18,20 +26,29 @@ export default class UI {
 
         const row = document.createElement('tr')
 
+        function checkRead(read) {
+          if (read == 'Read') {
+            return 'checked';
+          }
+          return '';
+        }
+
         row.innerHTML = `
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.pages}</td>
-        <td class="status">${book.read}</td>
+        <td class="status"><div class="form-check form-switch">
+        <input
+          class="form-check-input read"
+          type="checkbox"
+          id="flexCheck"
+          ${checkRead(book.read)}
+        />
+        <label class="form-check-label" for="flexCheck">${book.read}</label>
+      </div></td>
         <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>`;
         list.appendChild(row);
         this.switcher();
-    }
-
-    static deleteBook(el) {
-        if(el.classList.contains('delete')) {
-            el.parentElement.parentElement.remove();
-        }
     }
 
     static clearFields() {
@@ -39,6 +56,7 @@ export default class UI {
         document.querySelector('#author').value = '';
         document.querySelector('#pages').value = '';
     }
+
 
     static deleteBook(el) {
         if(el.classList.contains('delete')) {
