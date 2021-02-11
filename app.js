@@ -1,9 +1,9 @@
-/* jshint ignore:start */
+/*eslint-disable */
 
 import Book from './dist/book.js';
 import Store from './dist/storage.js';
 import UI from './dist/ui.js';
-/* jshint ignore:end */
+/* eslint-enable */
 
 // Events
 
