@@ -9,10 +9,6 @@
 - HTML
 - Bootstrap
 
-## Live Demo
-
-Open [Live Version](https://karmaester.github.io/Books-Books/)
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
