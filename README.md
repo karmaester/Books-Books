@@ -3,6 +3,8 @@
 - Javascript app for books library, you can manage the books you've read and those you haven't.
 - Users can add as well as delete books from the library.
 
+![screenshot](screenshot.png)
+
 ## Live Demo
 
 [Live version](https://karmaester.github.io/Books-Books/)
