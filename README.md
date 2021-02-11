@@ -3,6 +3,10 @@
 - Javascript app for books library, you can manage the books you've read and those you haven't.
 - Users can add as well as delete books from the library.
 
+## Live Demo
+
+[Live version](https://karmaester.github.io/Books-Books/)
+
 ## Built With
 
 - Javascript
@@ -25,6 +29,8 @@ Install Node and npm:
   sudo apt install nodejs
   sudo apt install npm
 ```
+
+- Open index.html file in browser
 
 ### Github Actions
 
