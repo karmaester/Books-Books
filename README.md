@@ -1,6 +1,6 @@
 # Books-Books
 
-- Javascript app for books library, you can manage the books you've read and those you haven't.
+- JavaScript app for books library, you can manage the books you've read and those you haven't.
 - Users can add as well as delete books from the library.
 
 ![screenshot](screenshot.png)
@@ -11,7 +11,7 @@
 
 ## Built With
 
-- Javascript
+- JavaScript
 - HTML
 - Bootstrap
 
